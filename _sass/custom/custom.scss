@@ -1,57 +1,56 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&display=swap');
 
-body {
-    font-family: Roboto;
-    font-size: 1em;
-    margin: 0;
+@media (min-width: 31.25rem) {
+.site-title {
+    font-size: 21px !important;
+    line-height: 1.25;
 }
-
-.container {
-   width: 36em;
-   margin: 0 auto;
-   max-width: 100%;
-   line-height: 1.5;
-   font-size: 16px;
-   padding: 1em 3em 1em 3em; /*TRBL*/
-   background-color: #f3f1ec;
+.site-footer {
+   display: block;
 }
-
-@media only screen and (max-width: 320px) {
-   .container{
-      font-size:14px;
-   }
+html {
+   scroll-behavior: auto;
 }
-
 footer {
    display: flex;
    justify-content: space-between;
-   align-items: center;
-   border-top: 4pt double;
-   padding-top: .5em;
-   margin-bottom: 2em;
+   align-items: baseline;
 }
 
 header {
-   display: flex;
+   /*display: flex;
    justify-content: space-between;
-   align-items: center;
-   border-top: 4pt double;
+   align-items: baseline;*/
+   text-align: center;
+   border-bottom: 2pt solid #eeebee;
+   padding-bottom: .5em;
+   margin-bottom: 1em;
+/*   border-top: 4pt double;
    padding-top: .5em;
-   margin-top: 1em;
+   margin-top: 1em;*/
+}
+
+.main-content h1:first-of-type {
+   margin: 0;
+}
+
+.main-content a {
+   text-decoration: none;
 }
 
 h1 {
-   font-size: 1.6em;
+/*   font-size: 1.6em;*/
    font-weight: 700;
-   text-align: center;
    margin: 0;
    padding: 0;
+   line-height: normal;
+   text-align: center;
 }
 
 h2 {
-   font-size: 1.15em;
+/*   font-size: 1.15em;
    font-weight: 500;
-   margin: 0;
+   margin: 0;*/
    text-indent:-2em;
    padding-left:2em;
    text-transform:uppercase;
@@ -83,29 +82,38 @@ hr {
 }
 
 .subsectionhead {
-   border-top: 2pt double;
-   border-bottom: 2pt double;
-   padding: .3em;
+
+border-top: 2pt solid #eeebee;
+ border-bottom: 2pt solid #eeebee;
+   padding: .1em; /*
+   margin-bottom: 1em;
+*/
    display: flex;
    justify-content: space-between;
    align-items: center;
-   margin-bottom: 1em;
+}
+
+.middle {
+   width: 60%;
+   margin-left: auto;
+   margin-right: auto;
 }
 
 .sectionhead {
-  border-top: 0.3em double;
-  border-bottom: 0.3em double; /*TRBL*/
+ border-top: 2pt solid #eeebee;
+  border-bottom: 2pt solid #eeebee; /*
   padding: .5em;
+  margin-bottom: 1em;
+*/
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 1em;
 }
   .sectiontitle {
-    text-transform: uppercase;
+   /* text-transform: uppercase;
     font-size: 1.15em;
     font-weight: 500;
-    line-height:1.3em;
+    line-height:1.3em;*/
     margin-right: 1em;
   }
   .sectionnav {
@@ -147,9 +155,7 @@ hr {
     }
 
 a, a:visited {
-   border-bottom: 1px solid;
    text-decoration: none;
-   padding-bottom: 0.1em;
    color: #6b3013;
 }
 
@@ -158,12 +164,7 @@ a:hover {
    color:#be0d00;
 }
 
-.toc-container {
-   margin-left: 0;
-   border-bottom: 2pt double;
-   padding-top: 0;
-}
-
+/*
 ol {
  list-style-type:decimal-leading-zero;
  counter-reset: counter 0;
@@ -176,10 +177,45 @@ ol ol ol { margin-left: 1.5em; }
 
 ol li { counter-increment: counter; padding: 0 0 0 .7em; }
 
-ol li::marker { content: counters(counter, ".") " "; font-weight: 700; }
+ol li::marker { content: counters(counter, ".") " ."; font-weight: 700; }
 
 .lispace { margin-bottom: 1em; }
 
 ol a { border-bottom: none; }
+*/
 
-.tocheading { font-weight: 700; }
+.tocheading {
+   font-weight: 700;
+   margin-bottom: 0;
+}
+
+#decimalcontents {
+ol {
+  list-style-type: none;
+  counter-reset: step-counter;
+  margin-top: 0;
+
+  > li {
+    position: relative;
+    color: gray;
+    margin-left: 2em;
+
+    &::before {
+      position: relative;
+      top: 0.2em;
+      left: -1.6em;
+      color: gray;
+      content: counters(step-counter, ".", decimal) " ";
+      counter-increment: step-counter;
+      @include fs-3;
+
+      @include mq(sm) {
+        top: 0.11em;
+      }
+    }
+    }
+  }
+  ol ol { margin-left: 1em; }
+  ol li { font-size: .95em; margin-top: 0; margin-bottom: 0;}
+}
+}
