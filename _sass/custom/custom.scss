@@ -40,7 +40,7 @@ header {
 
 h1 {
 /*   font-size: 1.6em;*/
-   font-weight: 700;
+   font-weight: bold;
    margin: 0;
    padding: 0;
    line-height: normal;
@@ -49,7 +49,7 @@ h1 {
 
 h2 {
 /*   font-size: 1.15em;
-   font-weight: 500;
+   font-weight: bold;
    margin: 0;*/
    text-indent:-2em;
    padding-left:2em;
@@ -57,7 +57,7 @@ h2 {
 }
 
 h3 {
-   font-weight: 500;
+   font-weight: bold;
    font-size: 1.1em;
    margin: 0;
    text-indent:-2em;
@@ -70,15 +70,15 @@ hr {
 }
 
 .fail {
-   color: #b83232;
-   font-size: .9em;
-   margin-top: 0;
+   color: #b83232 !important;
+   font-size: .9em !important;
+   margin-top: 0 !important;
 }
 
 .succ {
-   color: #4ea24c;
-   font-size: .9em;
-   margin-top: 0;
+   color: #4ea24c !important;
+   font-size: .9em !important;
+   margin-top: 0 !important;
 }
 
 .subsectionhead {
@@ -112,7 +112,7 @@ border-top: 2pt solid #eeebee;
   .sectiontitle {
    /* text-transform: uppercase;
     font-size: 1.15em;
-    font-weight: 500;
+    font-weight: bold;
     line-height:1.3em;*/
     margin-right: 1em;
   }
@@ -121,37 +121,37 @@ border-top: 2pt solid #eeebee;
     flex-shrink: 0;
   }
   .indent {
-    margin-left: 2em;
+    margin-left: 2em !important;
     }
   .choice {
-    padding-left: 0;
-    margin-left: 0;
-    text-indent: 0;
-    margin-bottom: .8em;
-    margin-top: 0;
-    font-weight: 500;
+    padding-left: 0 !important;
+    margin-left: 0 !important;
+    text-indent: 0 !important;
+    margin-bottom: .8em !important;
+    margin-top: 0 !important;
+    font-weight: bold !important;
     }
   .choice span {
-     border-bottom: 0.1em solid;
-     padding-bottom: 0.2em;
+     border-bottom: 0.1em solid !important;
+     padding-bottom: 0.2em !important;
  }
   .stage {
-    font-style: italic;
-    padding-left:1em;
-    text-indent: -1em;
+    font-style: italic !important;
+    padding-left:1em !important;
+    text-indent: -1em !important;
     }
 
   .dialogue {
-    padding-left: 2.5em;
-    text-indent: -2.5em;
-    margin-bottom: 1.3em;
+    padding-left: 2.5em !important;
+    text-indent: -2.5em !important;
+    margin-bottom: 1.3em !important;
     }
   .dialogue p {
-    margin-bottom: 0;
-    margin-top: 0;
+    margin-bottom: 0 !important;
+    margin-top: 0 !important;
     }
   .tag {
-    font-weight: 700;
+    font-weight: bold !important;
     }
 
 a, a:visited {
@@ -171,13 +171,14 @@ ol {
  margin-left: 0;
 }
 
+
 ol ol { margin-left: 1em; }
 
 ol ol ol { margin-left: 1.5em; }
 
 ol li { counter-increment: counter; padding: 0 0 0 .7em; }
 
-ol li::marker { content: counters(counter, ".") " ."; font-weight: 700; }
+ol li::marker { content: counters(counter, ".") " ."; font-weight: bold; }
 
 .lispace { margin-bottom: 1em; }
 
@@ -185,7 +186,7 @@ ol a { border-bottom: none; }
 */
 
 .tocheading {
-   font-weight: 700;
+   font-weight: bold;
    margin-bottom: 0;
 }
 
@@ -218,4 +219,91 @@ ol {
   ol ol { margin-left: 1em; }
   ol li { font-size: .95em; margin-top: 0; margin-bottom: 0;}
 }
+}
+
+@media (max-width: 1024px) {
+   .fail {
+      color: #b83232 !important;
+      font-size: .9em !important;
+      margin-top: 0 !important;
+   }
+
+   .succ {
+      color: #4ea24c !important;
+      font-size: .9em !important;
+      margin-top: 0 !important;
+   }
+
+   .subsectionhead {
+
+   border-top: 2pt solid #eeebee;
+    border-bottom: 2pt solid #eeebee;
+      padding: .1em; /*
+      margin-bottom: 1em;
+   */
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+   }
+
+   .middle {
+      width: 60%;
+      margin-left: auto;
+      margin-right: auto;
+   }
+
+   .sectionhead {
+    border-top: 2pt solid #eeebee;
+     border-bottom: 2pt solid #eeebee; /*
+     padding: .5em;
+     margin-bottom: 1em;
+   */
+     display: flex;
+     justify-content: space-between;
+     align-items: center;
+   }
+     .sectiontitle {
+      /* text-transform: uppercase;
+       font-size: 1.15em;
+       font-weight: bold;
+       line-height:1.3em;*/
+       margin-right: 1em;
+     }
+     .sectionnav {
+       font-size: 0.8em;
+       flex-shrink: 0;
+     }
+     .indent {
+       margin-left: 2em !important;
+       }
+     .choice {
+       padding-left: 0 !important;
+       margin-left: 0 !important;
+       text-indent: 0 !important;
+       margin-bottom: .8em !important;
+       margin-top: 0 !important;
+       font-weight: bold !important;
+       }
+     .choice span {
+        border-bottom: 0.1em solid !important;
+        padding-bottom: 0.2em !important;
+    }
+     .stage {
+       font-style: italic !important;
+       padding-left:1em !important;
+       text-indent: -1em !important;
+       }
+
+     .dialogue {
+       padding-left: 2.5em !important;
+       text-indent: -2.5em !important;
+       margin-bottom: 1.3em !important;
+       }
+     .dialogue p {
+       margin-bottom: 0 !important;
+       margin-top: 0 !important;
+       }
+     .tag {
+       font-weight: bold !important;
+       }
 }
