@@ -236,6 +236,70 @@ ol {
 }
 }
 
+.sekrit {
+   line-height: 1px !important;
+   margin: 0;
+   padding: 0;
+   visibility: hidden;
+}
+.sekrit ::before{
+   line-height:1px;
+}
+
+.tocheading {
+   font-weight: bold;
+   margin-bottom: 0;
+}
+
+#toc-prologue {
+   margin-left: -1.5em;
+   ol {
+      list-style-type: none;
+      margin-top: 0;
+      counter-reset: prologue 0;
+
+      > li {
+       position: relative;
+       color: gray;
+       margin-left: 2.3em;
+       line-height: 1.2em;
+
+       &:before {
+         position: relative;
+         top: auto;
+         left: -.5em;
+         color: gray;
+         content: counters(prologue, ".", decimal-leading-zero) " ";
+         counter-increment: prologue;
+       }
+    }
+}
+}
+
+#toc-chapter1 {
+   margin-left: -1.5em;
+   ol {
+      list-style-type: none;
+      margin-top: 0;
+      counter-reset: chapter1;
+
+      > li {
+       position: relative;
+       color: gray;
+       margin-left: 3em;
+       line-height: 1.2em;
+
+       &:before {
+         position: relative;
+         top: auto;
+         left: -1.6em;
+         color: gray;
+         content: counters(chapter1, ".", decimal-leading-zero) " ";
+         counter-increment: chapter1;
+       }
+    }
+}
+}
 
 @media (max-width: 1024px) {
    .fail {
@@ -352,4 +416,68 @@ ol {
          ol ol { margin-left: 1em; }
          ol li { font-size: .95em; margin-top: 0; margin-bottom: 0;}
        }
+       .sekrit {
+          line-height: 1px !important;
+          margin: 0;
+          padding: 0;
+          visibility: hidden;
        }
+       .sekrit ::before{
+          line-height:1px;
+       }
+
+       .tocheading {
+          font-weight: bold;
+          margin-bottom: 0;
+       }
+
+       #toc-prologue {
+          margin-left: -1.5em;
+          ol {
+             list-style-type: none;
+             margin-top: 0;
+             counter-reset: prologue 0;
+
+             > li {
+              position: relative;
+              color: gray;
+              margin-left: 2.3em;
+              line-height: 1.2em;
+
+              &:before {
+                position: relative;
+                top: auto;
+                left: -.5em;
+                color: gray;
+                content: counters(prologue, ".", decimal-leading-zero) " ";
+                counter-increment: prologue;
+              }
+           }
+       }
+       }
+
+       #toc-chapter1 {
+          margin-left: -1.5em;
+          ol {
+             list-style-type: none;
+             margin-top: 0;
+             counter-reset: chapter1;
+
+             > li {
+              position: relative;
+              color: gray;
+              margin-left: 3em;
+              line-height: 1.2em;
+
+              &:before {
+                position: relative;
+                top: auto;
+                left: -1.6em;
+                color: gray;
+                content: counters(chapter1, ".", decimal-leading-zero) " ";
+                counter-increment: chapter1;
+              }
+           }
+       }
+       }
+    }
