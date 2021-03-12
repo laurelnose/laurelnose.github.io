@@ -1,4 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&display=swap');
+@import "tableofcontents.scss";
+
+body {
+   font-family: "Open Sans", Roboto, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+}
 
 @media (min-width: 31.25rem) {
 .site-title {
@@ -15,6 +21,7 @@ footer {
    display: flex;
    justify-content: space-between;
    align-items: baseline;
+   padding-left: 1.5em;
 }
 
 header {
@@ -129,7 +136,7 @@ border-top: 2pt solid #eeebee;
     text-indent: 0 !important;
     margin-bottom: .8em !important;
     margin-top: 0 !important;
-    font-weight: bold !important;
+    font-weight: 600 !important;
     }
   .choice span {
      border-bottom: 0.1em solid !important;
@@ -190,6 +197,14 @@ ol a { border-bottom: none; }
    margin-bottom: 0;
 }
 
+blockquote {
+   background-color: #f5f6fa;
+   padding-left: 2em;
+   padding-right: 2em;
+   padding-top: .5em;
+   padding-bottom: .5em;
+}
+
 #decimalcontents {
 ol {
   list-style-type: none;
@@ -220,6 +235,7 @@ ol {
   ol li { font-size: .95em; margin-top: 0; margin-bottom: 0;}
 }
 }
+
 
 @media (max-width: 1024px) {
    .fail {
@@ -282,7 +298,7 @@ ol {
        text-indent: 0 !important;
        margin-bottom: .8em !important;
        margin-top: 0 !important;
-       font-weight: bold !important;
+       font-weight: 600 !important;
        }
      .choice span {
         border-bottom: 0.1em solid !important;
@@ -306,4 +322,34 @@ ol {
      .tag {
        font-weight: bold !important;
        }
-}
+
+#decimalcontents {
+       ol {
+         list-style-type: none;
+         counter-reset: step-counter;
+         margin-top: 0;
+
+         > li {
+           position: relative;
+           color: gray;
+           margin-left: 2em;
+
+           &::before {
+             position: relative;
+             top: 0.2em;
+             left: -1.6em;
+             color: gray;
+             content: counters(step-counter, ".", decimal) " ";
+             counter-increment: step-counter;
+             @include fs-3;
+
+             @include mq(sm) {
+               top: 0.11em;
+             }
+           }
+           }
+         }
+         ol ol { margin-left: 1em; }
+         ol li { font-size: .95em; margin-top: 0; margin-bottom: 0;}
+       }
+       }

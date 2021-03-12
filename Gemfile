@@ -11,6 +11,7 @@ source "https://rubygems.org"
 gem "github-pages", "~> 212", group: :jekyll_plugins
 # This is the default theme for new Jekyll sites. You may change this to anything you like.
 gem "just-the-docs"
+gem "jekyll-remote-theme"
 
 # If you have any plugins, put them here!
 group :jekyll_plugins do
