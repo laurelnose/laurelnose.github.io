@@ -45,7 +45,7 @@ header {
    text-decoration: none;
 }
 
-h1 {
+.h1-chapters {
 /*   font-size: 1.6em;*/
    font-weight: bold;
    margin: 0;
@@ -170,6 +170,12 @@ a:hover {
    border-bottom: none;
    color:#be0d00;
 }
+.changelog {
+  padding-left: 6em !important;
+  text-indent: -6em !important;
+  margin-bottom: 1.3em !important;
+  }
+
 
 /*
 ol {
@@ -215,6 +221,7 @@ ol {
     position: relative;
     color: gray;
     margin-left: 2em;
+    text-decoration: none;
 
     &::before {
       position: relative;
@@ -263,6 +270,7 @@ ol {
        color: gray;
        margin-left: 2.3em;
        line-height: 1.2em;
+       text-decoration: none;
 
        &:before {
          position: relative;
@@ -443,6 +451,7 @@ ol {
               color: gray;
               margin-left: 2.3em;
               line-height: 1.2em;
+              text-decoration: none;
 
               &:before {
                 position: relative;

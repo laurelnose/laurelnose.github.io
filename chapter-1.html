@@ -12,59 +12,21 @@ has_toc: false
 </header>
 
 <section id="contents">
-<h2>Table of Contents</h2>
+<h2>CONTENTS</h2>
 <div id="toc-prologue">
-<ol>
-   <li class="sekrit">
-      <a href="tutorial/" class="tocheading">TUTORIAL</a>
-   </li>
-   <li class="sekrit"><!--PROLOGUE-->
-      <a href="prologue/" class="tocheading">PROLOGUE</a>   </li>
-   <li><!--CHAPTER 1-->
-      <a href="https://laurelnose.github.io/chapter-1/" class="tocheading">CHAPTER I</a>
-      <ol>
-         <li><a href="#31">A Rough Landing</a></li>
-         <li><a href="#32">By the Gods - Stringing Up Sods</a></li>
-         <li><a href="#33">Kayran - A Matter of Price</a></li>
-         <li><a href="#34">Kayran - Cedric and the Shipwreck</a></li>
-         <li><a href="#35">An Indecent Proposal</a></li>
-            <ol><li><a href="#351">The Ballista</a></li></ol>
-         <li>Killing the Kayran</li>
-         <li>Visiting Ciaran</li>
-         <li>The Rose of Remembrance</li>
-         <li>Zoltan the Squirrel</li>
-         <li>Confronting Letho</li>
-         <li>At a Crossroads: Iorveth
-            <ol>
-               <li>The Floating Prison</li>
-            </ol></li>
-         <li>At a Crossroads: Roche
-            <ol>
-               <li>Death to the Traitor!</li>
-            </ol></li>
-         <li>Where is Triss Merigold?
-            <ol><li>Margot's Disappearance</li></ol></li>
-         <li>Character Dialogue</li>
-         <li><a href="chapter-1-sidequests/" class="tocheading">Sidequests</a>
-            <ol>
-               <li><a href="/chapter-1-sidequests/#fightclub">Fight Club</a></li>
-               <li>Hung Over</li>
-               <li>In the Claws of Madness</li>
-               <li>Malena</li>
-               <li>Melitele's Heart</li>
-               <li>Mystic River</li>
-               <li>The Scent of Incense
-                  <ol><li>Little Shop of Dreams</li></ol>
-               </li>
-               <li>Troll Trouble [DLC]</li>
-            </ol>
-         </li>
-      </ol>
-   </li>
+   <ol>
+      <li class="sekrit"><a href="tutorial/" class="tocheading">TUTORIAL</a></li>
+      <li class="sekrit"><a href="prologue/" class="tocheading">PROLOGUE</a></li>
+      <li><!--CHAPTER 1-->
+         <a href="https://laurelnose.github.io/chapter-1/" class="tocheading">CHAPTER I</a>
+         {% include ch1_toc.html %}
+      </li>
    <ol>
 </div>
 </section>
+
 <hr>
+
 <section id="30"><!--Beginning narration-->
 <p class="stage">[NARRATOR: Four months earlier. The Temerian–Aedirnian frontier.
 <p class="stage">Iorveth uses a nekker as bait for an arachas. Afterwards he returns to a cave
@@ -1280,12 +1242,11 @@ has_toc: false
 <p class="stage">[Triss casts her spell.]
 
 <div class="dialogue">
-<p><span class="tag">TRISS:</span> This monster's sick, Geralt... It's dying.
-<p><span class="tag">GERALT:</span> How much time does it have left?
-<p><span class="tag">TRISS:</span> A few years, perhaps a decade and change...
-<p><span class="tag">GERALT:</span> Too long. What's wrong with it? Any information could be useful.
-<p><span class="tag">TRISS:</span> The diagnostic spell showed that some of the cells in its body have
-        mutated...
+<p><span class="tag">TRISS:</span> This monster's sick, Geralt... It's dying.</p>
+<p><span class="tag">GERALT:</span> How much time does it have left?</p>
+<p><span class="tag">TRISS:</span> A few years, perhaps a decade and change...</p>
+<p><span class="tag">GERALT:</span> Too long. What's wrong with it? Any information could be useful.</p>
+<p><span class="tag">TRISS:</span> The diagnostic spell showed that some of the cells in its body have mutated...</p>
 </div>
 
 <div class="indent">
@@ -1297,7 +1258,7 @@ has_toc: false
            some ways, they're more effective than healthy cells, but they're
            out of control... They converge to create a red tissue - very
            unpleasant...
-   GERALT. The poor thing.
+   <p><span class="tag">GERALT:</span> The poor thing.</p>
    <p><span class="tag">TRISS:</span> But you brought up an interesting point. Want to know the core
            difference between mutants and non-mutants?</div>
 
@@ -1728,8 +1689,8 @@ has_toc: false
 <div class="indent">
    <div class="choice"><span>Nothing specific.
    </span></div>
-   <div class="dialogue"><p><span class="tag">GERALT:</span> I'm a witcher. I hunt monsters for coin.</div>
-   <p><em>[Continues same as "LOREDO: I suppose we all have our secrets."]</em>
+   <div class="dialogue"><p><span class="tag">GERALT:</span> I'm a witcher. I hunt monsters for coin.
+   <p><em>[Continues same as "LOREDO: I suppose we all have our secrets."]</em></div>
 
    <div class="choice"><span>That's my business.
    </span></div>

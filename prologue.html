@@ -2,51 +2,25 @@
 layout: default
 title: Prologue
 nav_order: 3
+has_children: true
+has_toc: false
+last_modified_date: 2021-03-15 19:20:00 -0800
 ---
 <header>
    <h1>PROLOGUE</h1>
 </header>
 
 <section id="contents">
-<details open markdown="block">
-  <summary>
-    Table of contents
-  </summary>
-  <ol id="decimalcontents">
-     <li style="visibility:hidden; margin:0; padding:0;line-height:.1em;">can'tseeme</li>
+   <h2>CONTENTS</h2>
+   <div id="toc-prologue">
+  <ol>
+     <li class="sekrit">can'tseeme</li>
      <li class="lispace"><span class="tocheading">Prologue</span>
-        <ol>
-           <li><a href="#21">Interrogation, part 1</a></li>
-           <li><a href="#22">By the King's Will</a></li>
-           <li><a href="#23">Newboy's Amulet (Melitele's Heart)</a></li>
-           <li><a href="#24">By the King's Will, Continued</a></li>
-           <li><a href="#25">At the Fore</a></li>
-           <li><a href="#26">Interrogation, part 2</a></li>
-           <li><a href="#27">Aryan La Valette (At the Fore)</a></li>
-           <li><a href="#28">Interrogation, part 3</a></li>
-           <li><a href="#29">Trial by Fire</a></li>
-           <li><a href="#210">Interrogation, part 4</a></li>
-           <li><a href="#211">To the Temple</a>
-              <ol>
-                 <li><a href="#2111">Woe Unto the Vanquished</a></li>
-              </ol>
-           </li>
-           <li><a href="#212">Interrogation, part 5</a></li>
-           <li><a href="#213">Blood of His Blood</a></li>
-           <li><a href="#214">Interrogation, part 6</a></li>
-           <li><a href="#215">Escaping the Dungeons</a>
-              <ol>
-                 <li><a href="#2151">Aryan La Valette: Alive</a></li>
-                 <li><a href="#2152">Aryan La Valette: Dead</a></li>
-              </ol>
-           </li>
-           <li><a href="#216">The Riverboat</a></li>
-        </ol>
+        {% include prlg.html %}
      </li>
   </ol>
-</details>
+</div>
 </section>
-
 <hr>
 
 <section id="20"><!--Beginning narration-->
@@ -1901,6 +1875,12 @@ During the rioting, 76 nonhumans perish, including the
 <p><span class="tag">EXECUTIONER:</span> A dog tore into a kitchen, and grabbed a sausage link, a stupid
          cook took umbrage, and killed him in a blink.
 </div>
+
+<p class="stage">[Geralt enters the room.]</p>
+
+<div class="dialogue">
+<p><span class="tag">EXECUTIONER:</span> You're early. Appointment's not till tomorrow.</p>
+<P><span class="tag">GERALT:</span> Sorry, I'm in a hurry. You'll see me today.</p>
 
 <p class="stage">[Geralt kills the executioner and releases Aryan, who falls to the ground.]</p>
 
