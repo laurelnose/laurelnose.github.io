@@ -74,6 +74,7 @@ h3 {
 
 hr {
    margin-bottom: 1.2em;
+   margin-top: 0;
 }
 
 .fail {
@@ -159,6 +160,7 @@ border-top: 2pt solid #eeebee;
     }
   .tag {
     font-weight: bold !important;
+    text-transform: uppercase !important;
     }
    .narbreak {
       margin: 0 !important;
@@ -397,6 +399,7 @@ ol {
        }
      .tag {
        font-weight: bold !important;
+       text-transform: uppercase !important;
        }
       .narbreak {
       margin: 0 !important;
