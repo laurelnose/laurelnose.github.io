@@ -5,7 +5,7 @@ nav_order: 4
 permalink: /chapter-1/
 has_children: true
 has_toc: false
-last_modified_date: 2021-03-17 23:14:00 -0800
+last_modified_date: 2021-03-28 13:39:00 -0800
 ---
 
 <header>
@@ -338,8 +338,10 @@ last_modified_date: 2021-03-17 23:14:00 -0800
 <p><span class="tag">DANDELION:</span> Geralt! Geralt! Over here! Help!
 </div>
 
-<p class="stage">[Geralt approaches the guard in front of the podium.]</p>
+<p class="stage">[Geralt can either take the direct approach or sneak around behind the scaffold.]</p>
 
+<div class="choice"><span>[If Geralt takes the direct approach]</span></div>
+<p class="stage">[Geralt approaches the scaffold directly.]
 <div class="dialogue">
 <p><span class="tag">GUARD:</span> Step back, white one.
 </div>
@@ -424,9 +426,39 @@ last_modified_date: 2021-03-17 23:14:00 -0800
       </div>
 </div>
 
-<p class="stage">[Geralt gets into a fistfight with two of the guards. The executioner hangs
-   one of the elves; Geralt goes for the executioner and fistfights him to
-   unconsciousness. Commandant Loredo approaches the podium.]
+<p class="stage">[Geralt gets into a fistfight with two of the guards. (If Geralt loses against the guards, the executioner hangs him.)]
+<hr class="middle">
+<div class="choice"><span>[If Geralt sneaks around]</span></div>
+
+<p class="stage">[Geralt goes around the side of the inn and through the gates to the docks]
+
+<div class="dialogue">
+<p><span class="tag">GUARD 1:</span> Who's up there, anyway?
+<p><span class="tag">GUARD 2:</span> The one in the cap's an arsonist and a lecher - his friend colluded with the Squirrels.
+<p><span class="tag">GUARD 1:</span> And the two elves?
+<p><span class="tag">GUARD 2:</span> Came from a roundup. I mean, what's a hanging without an elf? Heh.
+</div>
+
+<p class="stage">[Geralt uses Aard to destroy a set of barrels as a distraction.]
+
+<div class="dialogue">
+<p><span class="tag">GUARD 1:</span> See that? What the devil...?
+<p><span class="tag">GUARD 2:</span> Should we check?
+<p><span class="tag">GUARD 1:</span> No chance. I'm manning me post.
+<p><span class="tag">GUARD 2:</span> Bollocks... Think it was the Old Man?
+</div>
+<div class="dialogue">
+<p><span class="tag">GUARD:</span> You, there! What the hell was that?
+</div>
+
+<p class="stage">[Geralt ducks past the guards and through the other gate to arrive behind the
+   scaffold.]
+
+<hr class="middle">
+
+<p class="stage">[The executioner hangs one of the elves; Geralt climbs up onto the scaffold to the executioner and fistfights him to
+   unconsciousness. (If Geralt loses against the executioner, the executioner hangs him.) Commandant Loredo approaches the scaffold.]
+
 
 <div class="dialogue">
 <p><span class="tag">LOREDO:</span> What the hell is going on here?!
@@ -803,7 +835,8 @@ last_modified_date: 2021-03-17 23:14:00 -0800
          <div class="indent">
             <div class="dialogue"><span class="fail">[FAILURE]</span>
             <span class="tag">DOCK WORKER 1:</span> Oh, you tryin' that black magic on me? Come on,
-                    lads, this sorcerer's eager for a thrashin'!</div>
+                    lads, this sorcerer's eager for a thrashin'!
+            <p><em>[Geralt has to fistfight the dock workers to get them to leave.]</em></div>
 
             <div class="dialogue"><span class="succ">[SUCCESS]</span>
             <span class="tag">DOCK WORKER 1:</span> Right, we've dawdled enough already. Come on, lads,
@@ -2549,7 +2582,7 @@ last_modified_date: 2021-03-17 23:14:00 -0800
          <div class="narbreak">&nbsp;</div>
          I had to get her back, return to reality, return to the witcher’s Path.]</div>
 
-   <div class="dialogue"><br>
+   <div class="dialogue">
    <p><span class="tag">TRISS:</span> Geralt... Are you all right?
    <p><span class="tag">GERALT:</span> I've been to the Isle of Avallach, among the apple trees and the mists.
            After the massacre in Rivia, Ciri took me there, and Yennefer. The
