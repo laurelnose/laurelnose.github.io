@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,500;0,700;1,400;1,500;1,700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap');
 @import "tableofcontents.scss";
 
 body {
@@ -43,6 +44,7 @@ header {
 
 .main-content a {
    text-decoration: none;
+   white-space: normal;
 }
 
 .h1-chapters {
@@ -189,6 +191,9 @@ a:hover {
   margin-bottom: 1.3em !important;
   }
 
+pre {
+   font-family: "Roboto Mono","Courier New","Courier",monospace !important;
+}
 
 /*
 ol {
